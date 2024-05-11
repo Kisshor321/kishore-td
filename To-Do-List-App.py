@@ -11,8 +11,7 @@ def add():
 def remove():
     listbox.delete(ANCHOR)
 
-def delete():
-    pass
+
 def mark():
     try:
         result=listbox.curselection()[0]
