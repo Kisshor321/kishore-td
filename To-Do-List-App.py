@@ -1,5 +1,10 @@
 import tkinter
 from tkinter import*
+def date():
+    task=date1.get()
+    listbox.insert(END,task)
+    date1.delete(0,END)
+
 
 
 def add():
@@ -28,6 +33,14 @@ root.resizable(False,False)
 
 text=Label(root,text="📓  ADD LIST",width=30,font=("Arial",25,"bold"),bg="gray",relief=SUNKEN,fg="white")
 text.pack()
+label=Label(root,text="Enter Today Date:",font=("arial",10,"bold"))
+label.place(x=5,y=50)
+
+date1=Entry(root)
+date1.place(x=130,y=50)
+
+button=Button(root,text="Add Date",command=date,width=8)
+button.place(x=270,y=50)
 
 entry=Entry(root,font=("arial",15),width=28,bd=5,bg="#93ff75",relief=SUNKEN)
 entry.place(x=0,y=80)
